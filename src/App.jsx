@@ -421,7 +421,7 @@ export default function App() {
               <div className="text-sm">{t.projectCard.desc}</div>
             </div>
             <img
-              src="/proyecto_aintegra.jpg"
+              src="/proyecto_aintegra.png"
               alt="Aintegra Limited"
               className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm"
               style={{ minWidth: 72, minHeight: 72 }}
