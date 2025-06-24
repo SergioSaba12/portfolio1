@@ -404,34 +404,36 @@ export default function App() {
 
         {/* Proyectos & Certificaciones */}
         <motion.section
-          className="col-span-1 rounded-2xl p-4 sm:p-7 bg-white/70 shadow-xl flex flex-col gap-2 border border-[#cce6ff] hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.025] transition-all duration-300"
-          initial={{ opacity: 0, y: 60, scale: 0.97 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.7, type: "spring" }}
-          whileHover={{ scale: 1.025, boxShadow: "0 6px 40px #1a8cff20" }}
-          id="proyectos"
-        >
-          <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2">{t.projects}</h3>
-          <div className="flex flex-col sm:flex-row items-center gap-3 rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
-            <div className="flex-1">
-              <div className="font-semibold">
-                {t.projectCard.title} <span className="text-[#1a8cff]">{t.projectCard.dev}</span>
-              </div>
-              <div className="text-sm">{t.projectCard.desc}</div>
-            </div>
-            <img
-              src="/proyecto_aintegra.png"
-              alt="Aintegra Limited"
-              className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm"
-              style={{ minWidth: 72, minHeight: 72 }}
-            />
-          </div>
-          <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2 mt-1">{t.certs}</h3>
-          <ul className="list-disc pl-5 text-[#1a8cff] text-sm">
-            {t.certList.map(cert => <li key={cert}>{cert}</li>)}
-          </ul>
-        </motion.section>
+  className="col-span-1 rounded-2xl p-4 sm:p-7 bg-white/70 shadow-xl flex flex-col gap-2 border border-[#cce6ff] hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.025] transition-all duration-300"
+  initial={{ opacity: 0, y: 60, scale: 0.97 }}
+  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.7, type: "spring" }}
+  whileHover={{ scale: 1.025, boxShadow: "0 6px 40px #1a8cff20" }}
+  id="proyectos"
+>
+  <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2">{t.projects}</h3>
+  <div className="flex flex-col sm:flex-row items-center gap-3 rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
+    <div className="flex-1">
+      <div className="font-semibold">
+        {t.projectCard.title} <span className="text-[#1a8cff]">{t.projectCard.dev}</span>
+      </div>
+      <div className="text-sm">{t.projectCard.desc}</div>
+    </div>
+    <img
+      src="/proyecto_aintegra.png"
+      alt="Aintegra Limited"
+      className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm cursor-pointer"
+      style={{ minWidth: 72, minHeight: 72 }}
+      onClick={() => window.open("https://sergiosaba12.github.io/aintegra/", "_blank")}
+      title="Ver proyecto AIntegra"
+    />
+  </div>
+  <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2 mt-1">{t.certs}</h3>
+  <ul className="list-disc pl-5 text-[#1a8cff] text-sm">
+    {t.certList.map(cert => <li key={cert}>{cert}</li>)}
+  </ul>
+</motion.section>
       </main>
 
       {/* Contacto desplegable */}
