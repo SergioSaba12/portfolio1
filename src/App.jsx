@@ -77,7 +77,7 @@ const content = {
     projects: "Proyectos",
     certs: "Certificaciones",
     projectCard: {
-      title: "Aintegra",
+      title: "AIntegra Limited",
       dev: "(en desarrollo)",
       desc: "Solución tecnológica inclusiva para integración social y laboral mediante IA y accesibilidad digital.",
     },
@@ -170,7 +170,7 @@ const content = {
     projects: "Projects",
     certs: "Certifications",
     projectCard: {
-      title: "Aintegra",
+      title: "AIntegra Limited",
       dev: "(in development)",
       desc: "Inclusive tech solution for social and work integration through AI and digital accessibility.",
     },
@@ -413,9 +413,19 @@ export default function App() {
           id="proyectos"
         >
           <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2">{t.projects}</h3>
-          <div className="rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
-            <div className="font-semibold">{t.projectCard.title} <span className="text-[#1a8cff]">{t.projectCard.dev}</span></div>
-            <div className="text-sm">{t.projectCard.desc}</div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
+            <div className="flex-1">
+              <div className="font-semibold">
+                {t.projectCard.title} <span className="text-[#1a8cff]">{t.projectCard.dev}</span>
+              </div>
+              <div className="text-sm">{t.projectCard.desc}</div>
+            </div>
+            <img
+              src="/proyecto_aintegra.jpg"
+              alt="Aintegra Limited"
+              className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm"
+              style={{ minWidth: 72, minHeight: 72 }}
+            />
           </div>
           <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2 mt-1">{t.certs}</h3>
           <ul className="list-disc pl-5 text-[#1a8cff] text-sm">
