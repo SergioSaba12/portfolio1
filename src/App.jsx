@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// Cambia por tus imágenes en /public
+// Cambia estas rutas a tus imágenes reales en /public
 const FOTO_PERFIL = "/sergio.jpg";
 const FOTO_PREMIO = "/campeon_genera.jpg";
+const FOTO_AINTEGRA = "/proyecto_aintegra.png";
 
 const content = {
   es: {
@@ -16,7 +17,8 @@ const content = {
     },
     about: {
       title: "Sobre mí",
-      desc: "Estudiante de Ingeniería Telemática, especializado en IA, desarrollo y emprendimiento tecnológico. Me encanta aprender, crear soluciones y trabajar en equipo para dejar huella en el mundo digital.",
+      desc:
+        "Estudiante de Ingeniería Telemática, especializado en Inteligencia Artificial, desarrollo y emprendimiento tecnológico. Seleccionado para representar a la Universitat de València en el reto GENNERA U5CV y la ETSE como uno de los 4 mejores proyectos de la red de preincubadoras UV. Destacado por liderar proyectos galardonados en innovación y accesibilidad digital, con pasión por aprender, crear y dejar huella positiva en el mundo tecnológico.",
     },
     blocks: [
       {
@@ -58,12 +60,13 @@ const content = {
             </div>
             <div className="mb-2">
               <div className="font-semibold">Curso Challenges in Data Science</div>
-              <div className="text-sm text-[#1a8cff]">Universitat de València · 2024</div>
-              <div className="text-sm">Big Data, AI, startups y comunicación</div>
+              <div className="text-sm text-[#1a8cff]">Universitat de València · 2023 & 2024</div>
+              <div className="text-sm">Big Data, IA, startups y comunicación</div>
             </div>
             <div>
               <div className="font-semibold">Emprendimiento UVemprén</div>
               <div className="text-sm text-[#1a8cff]">Universitat de València · 2024</div>
+              <div className="text-sm">Ideación, validación y trabajo en equipo multidisciplinar</div>
             </div>
           </>
         ),
@@ -71,31 +74,66 @@ const content = {
     ],
     skills: "Skills",
     softSkills: "Soft Skills",
-    softList: ["Resolución de problemas", "Aprendizaje autónomo", "Trabajo en equipo", "Iniciativa y creatividad"],
+    softList: [
+      "Pensamiento crítico",
+      "Resolución de problemas",
+      "Aprendizaje autónomo",
+      "Trabajo en equipo",
+      "Iniciativa y creatividad",
+    ],
     languages: "Idiomas",
-    langList: ["Español (nativo)", "Valenciano (nativo)", "Inglés (B2 certificado)"],
+    langList: [
+      "Español (nativo)",
+      "Valenciano (nativo)",
+      "Inglés (B2 certificado)",
+    ],
     projects: "Proyectos",
     certs: "Certificaciones",
-    projectCard: {
-      title: "AIntegra Limited",
-      dev: "(en desarrollo)",
-      desc: "Solución tecnológica inclusiva para integración social y laboral mediante IA y accesibilidad digital.",
-    },
+    projectList: [
+      {
+        title: "SentinelAX",
+        dev: "(UPV/Samsung · 2025)",
+        desc: "Suite basada en IA para la detección de amenazas de ciberseguridad (phishing, deepfakes, código malicioso), desarrollada dentro del diploma de Samsung Innovation Campus.",
+      },
+      {
+        title: "MAPFRE QR CONNECT",
+        dev: "(Premio GENNERA · 2025)",
+        desc: "Solución ganadora del reto corporativo de innovación real MAPFRE GENNERA, destacada por su enfoque práctico y escalable.",
+      },
+      {
+        title: "AIntegra Limited",
+        dev: "(Finalista UVemprén · 2025)",
+        desc: "Plataforma inclusiva que impulsa la integración social y laboral con IA y accesibilidad digital. Finalista de la Red de Preincubadoras UV.",
+      },
+    ],
     certList: [
       "Python Essentials - Banco Santander",
       "Testing e Integración Continua - Capgemini",
+      "Diploma en IA - Samsung Innovation Campus (UPV, 2025)",
     ],
     awards: "🏆 Premios y Reconocimientos",
-    award1: {
-      title: "Ganador Concurso Gennera - UV",
-      year: "(2025)",
-      desc: "Premio al mejor proyecto universitario de reto empresarial.",
-    },
-    award2: {
-      title: "3er puesto MOTIVEM Fest - UV",
-      year: "(2024)",
-      desc: "Reconocimiento a idea innovadora en emprendimiento universitario.",
-    },
+    awardsList: [
+      {
+        title: "Ganador GENNERA U5CV - Representando a la UV",
+        year: "(2025)",
+        desc: "Primer premio en el reto interuniversitario GENNERA U5CV, representando a la Universitat de València y colaborando con equipos de cinco universidades.",
+      },
+      {
+        title: "Ganador Reto Empresarial GENNERA - UV & MAPFRE",
+        year: "(2025)",
+        desc: "Primer premio al mejor proyecto universitario en un reto de innovación real con MAPFRE.",
+      },
+      {
+        title: "Top 4 Red de Preincubadoras ETSE - UV",
+        year: "(2025)",
+        desc: "Seleccionado para representar a la ETSE como uno de los 4 mejores proyectos de emprendimiento universitario.",
+      },
+      {
+        title: "3er puesto MOTIVEM Fest - UV",
+        year: "(2024)",
+        desc: "Reconocimiento a idea innovadora en el certamen de emprendimiento universitario.",
+      },
+    ],
     premioFoto: "Sergio Sabater Ruiz recibiendo el premio Gennera",
     footer: "Web hecha con React, Tailwind y Framer Motion",
   },
@@ -109,7 +147,8 @@ const content = {
     },
     about: {
       title: "About me",
-      desc: "Telematics Engineering student, specialized in AI, development and tech entrepreneurship. I love learning, creating solutions and working in teams to make an impact in the digital world.",
+      desc:
+        "Telematics Engineering student specialized in Artificial Intelligence, development, and tech entrepreneurship. Selected to represent the University of Valencia in the GENNERA U5CV challenge and the School of Engineering (ETSE) as one of the top 4 projects in the UV pre-incubator network. Recognized for leading award-winning projects in innovation and digital accessibility, passionate about learning, building, and making a positive impact in the tech world.",
     },
     blocks: [
       {
@@ -141,7 +180,7 @@ const content = {
           <>
             <div className="mb-2">
               <div className="font-semibold">Degree in Telematics Engineering</div>
-              <div className="text-sm text-[#1a8cff]">Universitat de València · 2021-2025</div>
+              <div className="text-sm text-[#1a8cff]">University of Valencia · 2021-2025</div>
               <div className="text-sm">Networks, programming, distributed systems and telecommunications</div>
             </div>
             <div className="mb-2">
@@ -151,12 +190,13 @@ const content = {
             </div>
             <div className="mb-2">
               <div className="font-semibold">Course Challenges in Data Science</div>
-              <div className="text-sm text-[#1a8cff]">Universitat de València · 2024</div>
+              <div className="text-sm text-[#1a8cff]">University of Valencia · 2023 & 2024</div>
               <div className="text-sm">Big Data, AI, startups and communication</div>
             </div>
             <div>
               <div className="font-semibold">Entrepreneurship UVemprén</div>
-              <div className="text-sm text-[#1a8cff]">Universitat de València · 2024</div>
+              <div className="text-sm text-[#1a8cff]">University of Valencia · 2024</div>
+              <div className="text-sm">Ideation, validation, and multidisciplinary teamwork</div>
             </div>
           </>
         ),
@@ -164,34 +204,69 @@ const content = {
     ],
     skills: "Skills",
     softSkills: "Soft Skills",
-    softList: ["Problem solving", "Self-learning", "Teamwork", "Initiative and creativity"],
+    softList: [
+      "Critical thinking",
+      "Problem solving",
+      "Autonomous learning",
+      "Teamwork",
+      "Initiative and creativity",
+    ],
     languages: "Languages",
-    langList: ["Spanish (native)", "Valencian (native)", "English (B2 certified)"],
+    langList: [
+      "Spanish (native)",
+      "Valencian (native)",
+      "English (B2 certified)",
+    ],
     projects: "Projects",
     certs: "Certifications",
-    projectCard: {
-      title: "AIntegra Limited",
-      dev: "(in development)",
-      desc: "Inclusive tech solution for social and work integration through AI and digital accessibility.",
-    },
+    projectList: [
+      {
+        title: "SentinelAX",
+        dev: "(UPV/Samsung · 2025)",
+        desc: "AI-based suite for cybersecurity threat detection (phishing, deepfakes, malicious code), developed as part of the Samsung Innovation Campus diploma.",
+      },
+      {
+        title: "MAPFRE QR CONNECT",
+        dev: "(GENNERA Award · 2025)",
+        desc: "Award-winning solution for the real MAPFRE business innovation challenge, recognized for its practical and scalable approach.",
+      },
+      {
+        title: "AIntegra Limited",
+        dev: "(UVemprén Finalist · 2025)",
+        desc: "Inclusive tech platform that boosts social and work integration using AI and digital accessibility. Finalist of the UV Pre-incubator Network.",
+      },
+    ],
     certList: [
       "Python Essentials - Banco Santander",
       "Testing and Continuous Integration - Capgemini",
+      "AI Diploma - Samsung Innovation Campus (UPV, 2025)",
     ],
     awards: "🏆 Awards and Recognitions",
-    award1: {
-      title: "Winner Gennera Contest - UV",
-      year: "(2025)",
-      desc: "Award for the best university business challenge project.",
-    },
-    award2: {
-      title: "3rd place MOTIVEM Fest - UV",
-      year: "(2024)",
-      desc: "Recognition for innovative idea in university entrepreneurship.",
-    },
+    awardsList: [
+      {
+        title: "Winner GENNERA U5CV - Representing UV",
+        year: "(2025)",
+        desc: "First prize in the inter-university GENNERA U5CV challenge, representing the University of Valencia and collaborating with teams from five universities.",
+      },
+      {
+        title: "Winner GENNERA Business Challenge - UV & MAPFRE",
+        year: "(2025)",
+        desc: "First prize for the best university project in a real corporate innovation challenge with MAPFRE.",
+      },
+      {
+        title: "Top 4 Pre-incubator Network - ETSE (UV)",
+        year: "(2025)",
+        desc: "Selected to represent the School of Engineering (ETSE) as one of the 4 best university entrepreneurship projects.",
+      },
+      {
+        title: "3rd Place - MOTIVEM Fest UV",
+        year: "(2024)",
+        desc: "Recognition for an innovative idea in the university entrepreneurship competition.",
+      },
+    ],
     premioFoto: "Sergio Sabater Ruiz receiving the Gennera award",
     footer: "Website made with React, Tailwind and Framer Motion",
-  }
+  },
 };
 
 export default function App() {
@@ -213,10 +288,7 @@ export default function App() {
   return (
     <div className="min-h-screen transition-colors bg-gradient-to-br from-[#e0f2fe] via-[#f8fafc] to-[#e0e7ff]">
       {/* Fondo decorativo blobs */}
-      <div
-        aria-hidden
-        className="fixed inset-0 -z-10 pointer-events-none"
-      >
+      <div aria-hidden className="fixed inset-0 -z-10 pointer-events-none">
         <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-[#1a8cff]/20 rounded-full blur-3xl" />
         <div className="absolute bottom-[-100px] right-[-100px] w-[260px] h-[260px] bg-[#ffc300]/20 rounded-full blur-2xl" />
         <div className="absolute top-[40%] left-[-80px] w-[180px] h-[180px] bg-[#195799]/10 rounded-full blur-2xl" />
@@ -255,7 +327,6 @@ export default function App() {
 
       {/* HERO + FOTO */}
       <header className="relative flex flex-col items-center justify-center min-h-[35vh] py-10 px-2 sm:px-4 bg-transparent pt-20">
-        {/* Círculo animado fondo */}
         <motion.div
           className="absolute left-0 right-0 top-0 mx-auto w-[220px] sm:w-[360px] h-[90px] sm:h-[160px] rounded-full bg-[#1a8cff]/10 blur-3xl z-0"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -404,36 +475,38 @@ export default function App() {
 
         {/* Proyectos & Certificaciones */}
         <motion.section
-  className="col-span-1 rounded-2xl p-4 sm:p-7 bg-white/70 shadow-xl flex flex-col gap-2 border border-[#cce6ff] hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.025] transition-all duration-300"
-  initial={{ opacity: 0, y: 60, scale: 0.97 }}
-  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-  viewport={{ once: true }}
-  transition={{ delay: 0.7, type: "spring" }}
-  whileHover={{ scale: 1.025, boxShadow: "0 6px 40px #1a8cff20" }}
-  id="proyectos"
->
-  <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2">{t.projects}</h3>
-  <div className="flex flex-col sm:flex-row items-center gap-3 rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
-    <div className="flex-1">
-      <div className="font-semibold">
-        {t.projectCard.title} <span className="text-[#1a8cff]">{t.projectCard.dev}</span>
-      </div>
-      <div className="text-sm">{t.projectCard.desc}</div>
-    </div>
-    <img
-      src="/proyecto_aintegra.png"
-      alt="Aintegra Limited"
-      className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm cursor-pointer"
-      style={{ minWidth: 72, minHeight: 72 }}
-      onClick={() => window.open("https://sergiosaba12.github.io/aintegra/", "_blank")}
-      title="Ver proyecto AIntegra"
-    />
-  </div>
-  <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2 mt-1">{t.certs}</h3>
-  <ul className="list-disc pl-5 text-[#1a8cff] text-sm">
-    {t.certList.map(cert => <li key={cert}>{cert}</li>)}
-  </ul>
-</motion.section>
+          className="col-span-1 rounded-2xl p-4 sm:p-7 bg-white/70 shadow-xl flex flex-col gap-2 border border-[#cce6ff] hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.025] transition-all duration-300"
+          initial={{ opacity: 0, y: 60, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7, type: "spring" }}
+          whileHover={{ scale: 1.025, boxShadow: "0 6px 40px #1a8cff20" }}
+          id="proyectos"
+        >
+          <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2">{t.projects}</h3>
+          {t.projectList.map((proj, i) => (
+            <div key={proj.title} className="flex flex-col sm:flex-row items-center gap-3 rounded-xl bg-[#f8fbff] p-4 shadow mb-3 border border-[#e0f0ff]">
+              <div className="flex-1">
+                <div className="font-semibold">{proj.title} <span className="text-[#1a8cff]">{proj.dev}</span></div>
+                <div className="text-sm">{proj.desc}</div>
+              </div>
+              {proj.title === "AIntegra Limited" && (
+                <img
+                  src={FOTO_AINTEGRA}
+                  alt="Aintegra Limited"
+                  className="w-24 h-24 object-cover rounded-xl border border-[#b3e0ff] shadow-sm cursor-pointer"
+                  style={{ minWidth: 72, minHeight: 72 }}
+                  onClick={() => window.open("https://sergiosaba12.github.io/aintegra/", "_blank")}
+                  title="Ver proyecto AIntegra"
+                />
+              )}
+            </div>
+          ))}
+          <h3 className="text-lg sm:text-xl font-bold text-[#195799] mb-2 mt-1">{t.certs}</h3>
+          <ul className="list-disc pl-5 text-[#1a8cff] text-sm">
+            {t.certList.map(cert => <li key={cert}>{cert}</li>)}
+          </ul>
+        </motion.section>
       </main>
 
       {/* Contacto desplegable */}
@@ -477,29 +550,21 @@ export default function App() {
           >
             {t.awards}
           </motion.h3>
-          <motion.div
-            className="mb-2"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <span className="block font-bold text-[#195799] text-lg sm:text-xl">
-              {t.award1.title} <span className="text-[#ffc300] text-base sm:text-lg">{t.award1.year}</span>
-            </span>
-            <span className="block text-sm sm:text-base text-[#1a8cff]/80">{t.award1.desc}</span>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.25 }}
-          >
-            <span className="block font-bold text-[#195799] text-lg sm:text-xl mt-3">
-              {t.award2.title} <span className="text-[#ffc300] text-base sm:text-lg">{t.award2.year}</span>
-            </span>
-            <span className="block text-sm sm:text-base text-[#1a8cff]/80">{t.award2.desc}</span>
-          </motion.div>
+          {t.awardsList.map((award, i) => (
+            <motion.div
+              key={award.title}
+              className="mb-2"
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.22 + i * 0.07 }}
+            >
+              <span className="block font-bold text-[#195799] text-lg sm:text-xl">
+                {award.title} <span className="text-[#ffc300] text-base sm:text-lg">{award.year}</span>
+              </span>
+              <span className="block text-sm sm:text-base text-[#1a8cff]/80">{award.desc}</span>
+            </motion.div>
+          ))}
         </div>
         <div className="flex-1 flex flex-col items-center justify-center py-4 sm:py-6 px-2 sm:px-4">
           <motion.div
