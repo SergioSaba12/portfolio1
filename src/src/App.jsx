@@ -1,9 +1,6 @@
 import "./styles/apple-theme.css";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
-import Profile from "./sections/Profile";
-import Clients from "./sections/Clients";
-import Testimonials from "./sections/Testimonials";
 import Achievements from "./sections/Achievements";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
@@ -15,9 +12,6 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Profile />
-        <Clients />
-        <Testimonials />
         <Achievements />
         <Projects />
         <Skills />

@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 🔹 Variables globales */
+:root {
+  --bg: linear-gradient(90deg, #1d1dcf 0%, #000000 100%);
+  --text: #ffffff;
+  --card: rgba(17, 17, 17, 0.7);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* 🔹 Fondo global */
+html, body {
+  min-height: 100%;
+  background: var(--bg) fixed;
+  color: var(--text);
+}
+
+/* 🔹 Secciones principales */
+.apple-section {
+  position: relative;
+  padding: 4rem 1rem;
+  background: transparent; /* ✅ ya no tapa el gradiente */
+}
+
+/* 🔹 Tarjetas tipo Apple (glassmorphism) */
+.apple-surface {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
